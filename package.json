@@ -1,0 +1,16 @@
+{
+  "name": "advanced-express-server",
+  "version": "1.0.0",
+  "description": "A advanced express server ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "YouName",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^16.10.0",
+    "path": "^0.12.7"
+  }
+}
