@@ -35,14 +35,27 @@ $ npm install
   Create the main server file:
 
 ```js
-const express = require('express')
-const app = express()
+var express = require('express');
+var app = express();
+var path = require('path');
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+app.use((req, res, next) => {
+    console.log('Time: ', Date.now());
+    next();
+  });
 
-app.listen(3000)
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/root/index.html'));
+});
+
+app.use((req, res,next)=>{
+    res.sendFile(path.join(__dirname + '/root/errors/404.html'));
+}); 
+
+// Server Start up function.
+var server = app.listen( process.env.PORT || 2000, function(){
+    console.log('Listening on port ' + server.address().port);
+});
 ```
 
   Start the server:
