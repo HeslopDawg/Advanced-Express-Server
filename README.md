@@ -62,10 +62,12 @@ var server = app.listen( process.env.PORT || 2000, function(){
 
 ```bash
 $ npm start
+$ node .
+$ node server.js
 ```
 
 
-  View the website at: http://localhost:3000
+  View the website at: http://localhost:2000
 
 
 ## Examples (By Express)
